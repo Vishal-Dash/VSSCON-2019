@@ -28,6 +28,14 @@
     <!-- END CSS TEMPLATE -->
 </head>
 <!-- END HEAD -->
+<style>
+.polygon-clip-rhomboid {
+		-webkit-clip-path: polygon(0% 100%, 30% 0%, 100% 0%, 70% 100%);
+		clip-path: polygon(0% 100%, 30% 0%, 100% 0%, 70% 100%);
+		-webkit-clip-path: url("#polygon-clip-rhomboid");
+		clip-path: url("#polygon-clip-rhomboid");
+	}
+</style>
 <body>
     <div class="main-wrapper">
         <div role="navigation" class="navbar navbar-default navbar-static-top">
@@ -56,80 +64,22 @@
                 </div>
             </div>
         </div>
-        <div class="section grey text-center m-t-60 p-t-40 p-b-40" id="banner-footer">
-            <h2 class="normal m-b-10">
-                Pricing and Plans</h2>
-            <p>
-                Simple and clear, no hidden fees</p>
+        
+        <!-- team page -->
+        <div class="polygon-each container">	
+            <div class="polygon-each-img-wrap">
+                <img src="http://karenmenezes.com/shapes-polygon/image.jpg" alt="demo-clip-rhomboid" class="polygon-clip-rhomboid">
+            </div>	
+            <h4>Rhomboid</h4>
+            <svg class="clip-svg">
+                <defs>
+                    <clipPath id="polygon-clip-rhomboid" clipPathUnits="objectBoundingBox">
+                        <polygon points="0 1, 0.3 0, 1 0, 0.7 1" />
+                    </clipPath>
+                </defs>
+            </svg>	
         </div>
-        <div class="section white">
-            <div class="container p-t-50 p-b-50">
-                <div class="p-t-10">
-                    <div class="pricing t-mgr40">
-                        <div class="col-sm-4">
-                            <div class="plan active">
-                                <h3>
-                                    Standard</h3>
-                                <h4>
-                                    <span class="amount"><span>$</span>29<span>/mo</span></span></h4>
-                                <div>
-                                    <ul>
-                                        <li>250GB Disk Space</li>
-                                        <li>10 Email Accounts</li>
-                                        <li>Unlimited Bandwidth</li>
-                                        <li>24/7 Support</li>
-                                    </ul>
-                                </div>
-                                <div class="select">
-                                    <div>
-                                        <a class="btn btn-info" href="#" target="_self">Sign me up <i class="arrow_right">→</i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="plan">
-                                <h3>
-                                    Premium</h3>
-                                <h4>
-                                    <span class="amount"><span>$</span>49<span>/mo</span></span></h4>
-                                <div>
-                                    <ul>
-                                        <li>250GB Disk Space</li>
-                                        <li>20 Email Accounts</li>
-                                        <li>Unlimited Bandwidth</li>
-                                        <li>24/7 Support</li>
-                                    </ul>
-                                </div>
-                                <div class="select">
-                                    <div>
-                                        <a class="btn btn-info" href="#" target="_self">Sign me up <i class="arrow_right">→</i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="plan">
-                                <h3>
-                                    Deluxe</h3>
-                                <h4>
-                                    <span class="amount"><span>$</span>79<span>/mo</span></span></h4>
-                                <div>
-                                    <ul>
-                                        <li>300GB Disk Space</li>
-                                        <li>40 Email Accounts</li>
-                                        <li>Unlimited Bandwidth</li>
-                                        <li>24/7 Support</li>
-                                    </ul>
-                                </div>
-                                <div class="select">
-                                    <div>
-                                        <a class="btn btn-info" href="#" target="_self">Sign me up <i class="arrow_right">→</i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="section grey">
             <div class="container">
                 <div class="p-t-60 p-b-50">
