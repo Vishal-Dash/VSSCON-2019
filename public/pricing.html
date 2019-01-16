@@ -26,16 +26,55 @@
     <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
     <!-- END CSS TEMPLATE -->
+
+    <style>
+        .container {
+          position: relative;
+          width: 50%;
+        }
+        
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: #008CBA;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          transform: scale(0);
+          -webkit-transition: .3s ease;
+          transition: .3s ease;
+        }
+        
+        .container:hover .overlay {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+        
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        </style>
 </head>
 <!-- END HEAD -->
-<style>
-.polygon-clip-rhomboid {
-		-webkit-clip-path: polygon(0% 100%, 30% 0%, 100% 0%, 70% 100%);
-		clip-path: polygon(0% 100%, 30% 0%, 100% 0%, 70% 100%);
-		-webkit-clip-path: url("#polygon-clip-rhomboid");
-		clip-path: url("#polygon-clip-rhomboid");
-	}
-</style>
 <body>
     <div class="main-wrapper">
         <div role="navigation" class="navbar navbar-default navbar-static-top">
@@ -66,19 +105,12 @@
         </div>
         
         <!-- team page -->
-        <div class="polygon-each container">	
-            <div class="polygon-each-img-wrap">
-                <img src="http://karenmenezes.com/shapes-polygon/image.jpg" alt="demo-clip-rhomboid" class="polygon-clip-rhomboid">
-            </div>	
-            <h4>Rhomboid</h4>
-            <svg class="clip-svg">
-                <defs>
-                    <clipPath id="polygon-clip-rhomboid" clipPathUnits="objectBoundingBox">
-                        <polygon points="0 1, 0.3 0, 1 0, 0.7 1" />
-                    </clipPath>
-                </defs>
-            </svg>	
-        </div>
+        <div class="container">
+            <img src="img_avatar.png" alt="Avatar" class="image">
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
+          </div>
 
         <div class="section grey">
             <div class="container">
