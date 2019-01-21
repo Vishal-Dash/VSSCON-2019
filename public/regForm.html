@@ -207,6 +207,7 @@
 
 // Get a reference to the database service
 var database = firebase.database();
+var storage = firebase.storage();
 
 //Vue Js
     new Vue({
@@ -250,6 +251,8 @@ var database = firebase.database();
                 var file = input.files[0];
                 var storageRef = firebase.storage().ref('profile/' + name);
                 var task = storageRef.put(file);
+
+               
             }
             
         },
