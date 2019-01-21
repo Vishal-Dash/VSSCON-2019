@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Registration Form</title>
+    <!-- END CSS TEMPLATE -->
+    <link href="assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="assets/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link href="assets/css/main.css" rel="stylesheet" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+    <style>
+    img.preview {
+    width: 200px;
+    background-color: white;
+    border: 1px solid #DDD;
+    padding: 5px;
+}
+.active{
+    display: none;
+}
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="form">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Registration Form</h2>
+                    <div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Name</label>
+                                    <input class="input--style-4" type="text" v-model="name">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Institution</label>
+                                    <input class="input--style-4" type="text" v-model="institution">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Contact Number</label>
+                                    <input class="input--style-4" type="text" v-model="phnum">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Commitee Preferred</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">UNGA-DISEC
+                                            <input type="checkbox" value="UNGA-DISEC" v-model="checkedCommitee">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container m-r-45">UNFCC
+                                            <input type="checkbox" value="UNFCC" v-model="checkedCommitee">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                         <label class="radio-container m-r-45">LOK SABHA
+                                            <input type="checkbox" value="LOK SABHA" v-model="checkedCommitee">
+                                            <span class="checkmark"></span>
+                                        </label> <label class="radio-container m-r-45">UNHRC
+                                            <input type="checkbox" value="UNHRC" v-model="checkedCommitee">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" v-model="email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="text" name="phone" v-model="phn">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Applying as?</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Single Delegation
+                                            <input type="radio" value="Single Delegation" v-model="applying">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Double Delegation
+                                            <input type="radio" value="Double Delegation" v-model="applying">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Country Preference 1</label>
+                                    <input class="input--style-4" type="text" v-model="country1">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Country Preference 2</label>
+                                    <input class="input--style-4" type="text" v-model="country2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Country Preference 3</label>
+                                    <input class="input--style-4" type="text" v-model="country3">
+                                </div>
+                            </div>
+                           
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Want Accomodation?</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Yes
+                                            <input type="radio" value="Yes" v-model="accomodation" checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">No
+                                            <input type="radio" value="No" v-model="accomodation">
+                                            <span class="checkmark"></span>
+                                        </label>
+                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="row row-space">
+                           
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Previous Experience</label>
+                                    <input class="input--style-4" type="text" v-model="experience">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Profile Image</label>
+                                    <input type="file" @change="previewImage" accept="image/*">
+                                </div>
+                                <div class="image-preview" v-if="imageData.length > 0">
+                                    <img class="preview" :src="imageData">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div v-bind:class="{ active: !toggle }">
+                            <button class="btn btn--radius-2 btn--blue" type="submit" v-on:click="submit">Submit</button>
+                            <span style="color: red;">{{ error }}</span>
+                        </div>
+                        <div v-bind:class="{ active: toggle }">
+                                <button class="btn btn--radius-2 btn--blue" v-on:click="profile">View Profile</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+          // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAXQJ_ksPfxqaYr24re1_rEwub9OAEuTvM",
+    authDomain: "enigma-team.firebaseapp.com",
+    databaseURL: "https://enigma-team.firebaseio.com",
+    projectId: "enigma-team",
+    storageBucket: "enigma-team.appspot.com",
+    messagingSenderId: "79460500959"
+  };
+  firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+//Vue Js
+    new Vue({
+  el: '#form',
+  data: {
+      name:'',
+      institution:'',
+      phnum:'',
+      checkedCommitee: [],
+      email:'',
+      phn:'',
+      applying: '',
+      country1:'',
+      country2:'',
+      country3:'',
+      accomodation:'',
+      experience:'',
+      imageData: '',
+      error: '',
+      toggle: true
+  },
+  methods:{
+    previewImage: function(event) {
+            // Reference to the DOM input element
+            var input = event.target;
+            name = this.name;
+            // Ensure that you have a file before attempting to read it
+            if (input.files && input.files[0]) {
+                // create a new FileReader to read this image and convert to base64 format
+                var reader = new FileReader();
+                // Define a callback function to run, when FileReader finishes its job
+                reader.onload = (e) => {
+                    // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+                    // Read image as base64 and set to imageData
+                    this.imageData = e.target.result;
+                   
+                    
+                }
+                // Start the reader job - read file as a data url (base64 format)
+                reader.readAsDataURL(input.files[0]);
+                var file = input.files[0];
+                var storageRef = firebase.storage().ref('profile/' + name);
+                var task = storageRef.put(file);
+            }
+            
+        },
+    submit: function(){
+        //database handling
+        name = this.name;
+        institution = this.institution;
+        phnum = this.phnum;
+        checkedCommitee = this.checkedCommitee;
+        applying = this.applying;
+        country1 = this.country1;
+        country2 = this.country2;
+        country3 = this.country3;
+        accomodation = this.accomodation;
+        experience = this.experience;
+
+        if(name.length > 0 && institution.length > 0 && phnum.length> 0 && country1.length > 0){
+
+        writeUserData(name,institution,phnum, checkedCommitee, applying, country1, country2, country3, accomodation, experience);
+        // function sleep(ms) {
+        // return new Promise(resolve => setTimeout(resolve, ms));
+        // }
+        // sleep(3000);
+        this.toggle = false;
+        }
+        else{
+            this.error = 'Please fill all the fields';
+        }
+        function writeUserData(name, institution, phnum, checkedCommitee, applying, country1, country2, country3, accomodation, experience) {
+        firebase.database().ref('users/'+name).set({
+            username: name,
+            institution,
+            phnum,
+            checkedCommitee,
+            applying, country1, country2, country3, accomodation, experience
+        });
+        
+        }
+       
+        
+    },
+    profile: function(){
+        //data grab
+    }
+  }
+})
+    </script>
+
+
+
+
+</body>
+
+</html>
+<!-- end document-->
