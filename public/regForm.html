@@ -41,7 +41,30 @@
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
+                    <h5>
+                            <p>Greetings,</p>
+                            <br>Team VSSCON 2019 is delighted to invite you to the VSS Conference Of Nations 2019 organised by VSSUT, Burla from 2-4 March, 2019. 
+                            The Conference will be hosting the following committees: 
+                            <br>1. UNGA-DISEC: United Nations General Assembly- Disarmament and International Security Committee
+                            <br>2. UNHRC: United Nations Human Rights Council
+                            <br>3. UNFCCC: United Nations Framework Convention on Climate Change
+                            <br>4. Lok Sabha
+                            <br>5. International Press
+                            
+                            <p>The delagates of any committee are members upon whom the international negotiations resolve. 
+                            By coming under the skin of a respected delegate of a sovereign country, you hold the power to change the rukes of table of international deliberations. </p>
+                            
+                            <br>For further queries, contact: 
+                            <br>Email: vsscon2k19@gmail.com
+                            <p>Mobile: 6371506683(Niswarth Sahoo)</p>
+                            
+                            <br>Yours sincerely
+                            <br>Niswarth Sahoo
+                            <br>General Secretary
+                            <p>VSS Conference Of Nations 2019.</p>
+                    </h5>
+
+                    <br><h2 class="title">Registration Form</h2>
                     <div>
                         <div class="row row-space">
                             <div class="col-2">
@@ -207,7 +230,6 @@
 
 // Get a reference to the database service
 var database = firebase.database();
-var storage = firebase.storage();
 
 //Vue Js
     new Vue({
@@ -251,8 +273,6 @@ var storage = firebase.storage();
                 var file = input.files[0];
                 var storageRef = firebase.storage().ref('profile/' + name);
                 var task = storageRef.put(file);
-
-               
             }
             
         },
